@@ -52,9 +52,11 @@ public class Board {
         for (List<Integer> condition : winningConditions) {
             if (player1.getPlayerPositions().containsAll(condition)) {
                 System.out.println(player1.getName() + " WIN!");
+                player1.setWinner(true);
                 return;
             } else if (player2.getPlayerPositions().containsAll(condition)) {
                 System.out.println(player2.getName() + " WIN!");
+                player2.setWinner(true);
                 return;
             }
         }
